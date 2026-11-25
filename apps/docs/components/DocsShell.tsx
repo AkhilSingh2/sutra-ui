@@ -2,20 +2,38 @@
 
 import { LanguageToggle, MarkIcon, ThemeSwitcher } from '@sutra-ui/react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useState, type ReactNode } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useState, type MouseEvent, type ReactNode } from 'react';
+
 const links = [
-  { href: '/', label: 'Overview' },
-  { href: '/foundations', label: 'Foundations' },
+  { href: '/', label: 'Index' },
+  { href: '/philosophy', label: 'Philosophy' },
   { href: '/components', label: 'Components' },
-  { href: '/preview', label: 'Tool preview' },
+  { href: '/foundations', label: 'Tokens' },
+  { href: '/preview', label: 'Case study' },
 ];
+
+function normalize(path: string) {
+  return path.length > 1 ? path.replace(/\/$/, '') : path;
+}
 
 export function DocsShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
-  const current = pathname.length > 1 ? pathname.replace(/\/$/, '') : pathname;
+  const current = normalize(pathname);
   if (current === '/preview') return <>{children}</>;
+
+  const visit = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || typeof document.startViewTransition !== 'function') return;
+    event.preventDefault();
+    setOpen(false);
+    document.startViewTransition(() => {
+      router.push(href);
+    });
+  };
 
   return (
     <div className="docs-shell">
@@ -23,41 +41,54 @@ export function DocsShell({ children }: { children: ReactNode }) {
         Skip to content
       </a>
       <header className="docs-top">
-        <Link className="sutra-mark" href="/">
+        <Link className="sutra-mark" href="/" onClick={(event) => visit(event, '/')}>
           <MarkIcon />
-          <span>Sutra UI</span>
+          <span>Sutra</span>
         </Link>
         <button type="button" className="sutra-header-menu" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
           {open ? 'Close' : 'Menu'}
         </button>
+        <nav className="docs-top-nav" aria-label="Documentation">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              aria-current={current === link.href ? 'page' : undefined}
+              onClick={(event) => visit(event, link.href)}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
         <div className="docs-controls">
           <LanguageToggle />
           <ThemeSwitcher />
         </div>
       </header>
-      <div className="docs-frame">
-        <nav className={open ? 'docs-nav docs-nav--open' : 'docs-nav'} aria-label="Documentation">
+      <div className={open ? 'docs-nav docs-nav--open' : 'docs-nav'} >
+        <nav aria-label="Documentation">
           <ul>
-            {links.map((link) => {
-              const active = current === link.href;
-              return (
-                <li key={link.href}>
-                  <Link href={link.href} aria-current={active ? 'page' : undefined} onClick={() => setOpen(false)}>
-                    {link.label}
-                  </Link>
-                </li>
-              );
-            })}
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  aria-current={current === link.href ? 'page' : undefined}
+                  onClick={(event) => visit(event, link.href)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className="docs-nav-controls">
             <LanguageToggle />
             <ThemeSwitcher />
           </div>
         </nav>
-        <main id="docs-main" className="docs-main">
-          {children}
-        </main>
       </div>
+      <main id="docs-main" className="docs-main">
+        {children}
+      </main>
     </div>
   );
 }

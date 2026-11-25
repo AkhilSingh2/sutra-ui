@@ -29,7 +29,7 @@ importers:
 
   apps/docs:
     dependencies:
-      '@fontsource/baloo-2':
+      '@fontsource/fraunces':
         specifier: ^5.2.8
         version: 5.3.0
       '@fontsource/ibm-plex-mono':
@@ -677,8 +677,8 @@ packages:
       '@noble/hashes':
         optional: true
 
-  '@fontsource/baloo-2@5.3.0':
-    resolution: {integrity: sha512-CBuxZ27jvMmD5+KaaPkMWv/yjdRNppVAd5/002yAyvyQyLNL3aZCbkx6gbAT/bjxPd1A0VMdDQjfcELI8chccQ==}
+  '@fontsource/fraunces@5.3.0':
+    resolution: {integrity: sha512-LEHTOBiZufQzAvnAe2rZ8ZknbDS28Q9kzwb0L+gZJEmjLGr8hhZ/5NuHXwDuHBWhVXYoiGGXmrb0H6Ko/RrHTg==}
 
   '@fontsource/ibm-plex-mono@5.3.0':
     resolution: {integrity: sha512-eTgnZjZEGk1QtD3ZstF+Vclo2HLAni8YMy34/DxllwZvyz1lR/1RF/xTiAquOBO7MvqBx8D2Ig2WCPMVfdZu7Q==}
@@ -3568,7 +3568,7 @@ snapshots:
 
   '@exodus/bytes@1.16.0': {}
 
-  '@fontsource/baloo-2@5.3.0': {}
+  '@fontsource/fraunces@5.3.0': {}
 
   '@fontsource/ibm-plex-mono@5.3.0': {}
 

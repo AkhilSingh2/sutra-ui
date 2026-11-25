@@ -40,7 +40,7 @@ describe('reduced motion', () => {
     expect(css).toContain('[data-theme="dark"]');
     expect(css).toContain('[data-theme="high-contrast"]');
     expect(css).toContain('"Noto Sans Devanagari"');
-    expect(css).toContain('"Baloo 2"');
+    expect(css).toContain('Fraunces');
     expect(css).toContain('Inter');
     expect(css).toContain('"IBM Plex Mono"');
   });

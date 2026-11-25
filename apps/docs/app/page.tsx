@@ -2,67 +2,79 @@ import { Button } from '@sutra-ui/react';
 import type { Metadata } from 'next';
 import { href } from '../lib/href';
 
-export const metadata: Metadata = { title: 'Overview' };
+export const metadata: Metadata = { title: 'Index' };
 
 export default function HomePage() {
   return (
-    <article className="docs-prose">
+    <article className="docs-home">
       <section className="docs-hero">
-        <p className="docs-kicker">Marigold · rani · peacock</p>
-        <h1>Tools worth celebrating.</h1>
-        <div className="sutra-thread" aria-hidden="true" />
-        <p className="docs-lede">
-          Sutra UI is a bold, playful design system for calculators, converters, and generators. Festival
-          colours, chunky type, and Indian number formatting, with text that still meets WCAG AA.
-        </p>
-        <p lang="hi" className="docs-hi">
-          वेतन, कर, अंक और रूपांतरण — रंगों के साथ, हल्की और गहरी थीम में।
-        </p>
-        <div className="docs-actions">
-          <Button href={href('/preview')}>Open a tool preview</Button>
-          <Button href={href('/foundations')} variant="secondary">
-            View tokens
-          </Button>
+        <div className="docs-hero-copy">
+          <p className="docs-kicker">Gallery edition</p>
+          <h1 className="docs-reveal">
+            Sutra
+          </h1>
+          <div className="docs-rule" aria-hidden="true" />
+          <p className="docs-lede">
+            A design system for tools that handle money and measure. The Indian references are in the
+            line, the numeral, and the language — not in a louder colour.
+          </p>
+          <p lang="hi" className="docs-hi">
+            वेतन, कर और अंक, एक शांत पंक्ति में।
+          </p>
+          <div className="docs-actions">
+            <Button href={href('/components')}>View the components</Button>
+            <Button href={href('/philosophy')} variant="secondary">
+              Read the principles
+            </Button>
+          </div>
         </div>
+        <aside className="docs-hero-plate" aria-hidden="true">
+          <span>01 — Ink</span>
+          <svg viewBox="0 0 240 320" className="docs-hero-stroke">
+            <path className="sutra-ink" d="M40 40 C 80 20, 70 120, 120 140 S 200 180, 190 280" />
+          </svg>
+          <span>Kalamkari study</span>
+        </aside>
       </section>
-      <div className="docs-grid">
-        <section>
-          <h2>Festive</h2>
-          <p>Marigold, rani pink, peacock, turmeric, parrot green, and indigo. Colour is never the only signal.</p>
-        </section>
-        <section>
-          <h2>India-first</h2>
-          <p>Lakh and crore grouping, an INR mode, and Hindi labels for the controls themselves.</p>
-        </section>
-        <section>
-          <h2>Lightweight</h2>
-          <p>CSS variables, no runtime CSS-in-JS, and a core bundle under 15KB gzipped.</p>
-        </section>
-      </div>
-      <h2>Install</h2>
-      <pre className="docs-code">
-        <code>{`pnpm add @sutra-ui/tokens @sutra-ui/react`}</code>
-      </pre>
-      <h2>Use it in a Next.js page</h2>
-      <pre className="docs-code">
-        <code>{`import "@sutra-ui/react/styles.css";
-import { SutraProvider, NumberInput, ToolLayout } from "@sutra-ui/react";
-
-export default function Page() {
-  return (
-    <SutraProvider>
-      <ToolLayout title="CTC calculator" breadcrumb={[{ href: "/", label: "Home" }, { label: "CTC" }]}>
-        <NumberInput label="Annual CTC" mode="currency" value={1200000} onValueChange={() => {}} />
-      </ToolLayout>
-    </SutraProvider>
-  );
-}`}</code>
-      </pre>
-      <p>
-        Load Baloo 2 for display, Inter and Noto Sans Devanagari for body text, and IBM Plex Mono for
-        figures. All four are SIL Open Font License fonts. Devanagari falls through to Nirmala UI and Mangal
-        when the webfont has not arrived.
-      </p>
+      <section className="docs-index">
+        <h2>In the collection</h2>
+        <ol>
+          <li>
+            <a href={href('/philosophy')}>
+              <span>02</span>
+              <strong>Philosophy</strong>
+              <em>Why the palette, the type, and the motion are held back.</em>
+            </a>
+          </li>
+          <li>
+            <a href={href('/components')}>
+              <span>03</span>
+              <strong>Components</strong>
+              <em>Every control, with its variants, in the same room.</em>
+            </a>
+          </li>
+          <li>
+            <a href={href('/foundations')}>
+              <span>04</span>
+              <strong>Tokens</strong>
+              <em>Ivory, ink, gold, oxblood, emerald. Live in both themes.</em>
+            </a>
+          </li>
+          <li>
+            <a href={href('/preview')}>
+              <span>05</span>
+              <strong>Case study</strong>
+              <em>An income-tax shell. Illustrative figures, not advice.</em>
+            </a>
+          </li>
+        </ol>
+      </section>
+      <footer className="docs-colophon">
+        <p>
+          Fraunces, Inter, Noto Sans Devanagari, and IBM Plex Mono are SIL Open Font License faces.
+          Install with <code>pnpm add @sutra-ui/tokens @sutra-ui/react</code>.
+        </p>
+      </footer>
     </article>
   );
 }

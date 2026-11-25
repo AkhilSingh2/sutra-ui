@@ -2,7 +2,7 @@
 
 Sutra UI is a public, open-source design system for fast, accessible, India-first web tools: calculators, converters, and generators. It is meant for static Next.js sites written in React and TypeScript.
 
-The visual language is bold and playful: marigold, rani pink, peacock, turmeric, parrot green, and indigo, with chunky radii, offset shadows, and a bouncy motion scale. Numbers use Indian grouping. Body text stays in Inter and Noto Sans Devanagari; display type uses Baloo 2.
+The visual language is editorial: warm ivory, indigo-black ink, antique gold as a line, and oxblood or emerald only as a sparing accent. Radii are small, shadows are soft, and motion eases in slowly. Numbers use Indian grouping. Body text stays in Inter and Noto Sans Devanagari; display type uses Fraunces.
 
 ## Packages
 
@@ -74,12 +74,12 @@ module.exports = {
 
 | Font | Role | Licence |
 | --- | --- | --- |
-| Baloo 2 | Display Latin | SIL Open Font License |
+| Fraunces | Editorial display | SIL Open Font License |
 | Inter | Body Latin | SIL Open Font License |
 | Noto Sans Devanagari | Hindi, and display fallback | SIL Open Font License |
 | IBM Plex Mono | Figures and code | SIL Open Font License |
 
-Body text is `"Inter", "Noto Sans Devanagari", "Nirmala UI", "Mangal", sans-serif`. Display is `"Baloo 2", "Noto Sans Devanagari", "Inter", sans-serif`. Body line height is 1.5 so Devanagari has room.
+Body text is `"Inter", "Noto Sans Devanagari", "Nirmala UI", "Mangal", sans-serif`. Display is `"Fraunces", "Noto Sans Devanagari", "Iowan Old Style", "Palatino", serif`. Body line height stays open so Devanagari has room.
 
 ## Develop
 
