@@ -57,7 +57,14 @@ body {
   min-height: 68vh;
   padding-bottom: var(--sutra-space-10);
 }
-.docs-hero h1 { margin: var(--sutra-space-4) 0; font-size: clamp(4.5rem, 12vw, 8rem); }
+.docs-hero-copy { overflow: visible; min-width: 0; }
+.docs-hero h1 {
+  margin: 0.12em 0 0.16em;
+  padding: 0.06em 0 0.08em;
+  overflow: visible;
+  font-size: clamp(4.25rem, 10vw, 7rem);
+  line-height: 1.08;
+}
 .docs-hero-plate {
   min-height: 420px;
   display: flex;
@@ -84,14 +91,26 @@ body {
   height: 1px;
   margin: var(--sutra-space-4) 0;
   background: var(--sutra-color-thread-start);
+  transform: scaleX(1);
   transform-origin: left center;
-  animation: sutra-rule var(--sutra-motion-duration-slow) var(--sutra-motion-easing-standard) both;
 }
-.docs-reveal {
-  animation: sutra-reveal var(--sutra-motion-duration-slow) var(--sutra-motion-easing-standard) both;
+.docs-reveal { overflow: visible; }
+@media (prefers-reduced-motion: no-preference) {
+  .docs-rule {
+    animation: sutra-rule var(--sutra-motion-duration-slow) var(--sutra-motion-easing-standard) forwards;
+  }
+  .docs-reveal {
+    animation: sutra-reveal var(--sutra-motion-duration-slow) var(--sutra-motion-easing-standard) forwards;
+  }
 }
-@keyframes sutra-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-@keyframes sutra-reveal { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
+@keyframes sutra-rule {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes sutra-reveal {
+  from { clip-path: inset(0 0 100% 0); }
+  to { clip-path: none; }
+}
 .docs-colophon { margin-top: var(--sutra-space-12); color: var(--sutra-color-fg-muted); font-size: var(--sutra-font-size-sm); max-width: 62ch; }
 .docs-colophon code { font-family: var(--sutra-font-family-mono); }
 .docs-index { margin-top: var(--sutra-space-12); }
@@ -135,10 +154,15 @@ body {
 ::view-transition-new(root) {
   animation: sutra-enter var(--sutra-motion-duration-slow) var(--sutra-motion-easing-standard) both;
 }
-@keyframes sutra-leave { to { opacity: 0; clip-path: inset(0 0 0 8%); } }
-@keyframes sutra-enter { from { clip-path: inset(0 8% 0 0); } to { clip-path: inset(0); } }
+@keyframes sutra-leave { to { opacity: 0; } }
+@keyframes sutra-enter { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
-  .docs-reveal, .docs-rule, .sutra-ink { animation: none; }
+  .docs-reveal, .docs-rule, .sutra-ink {
+    animation: none;
+    clip-path: none;
+    transform: none;
+    stroke-dashoffset: 0;
+  }
   ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 }
 .docs-kicker {

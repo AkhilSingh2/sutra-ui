@@ -675,12 +675,19 @@
 }
 
 .sutra-ink {
-  stroke-dasharray: 80;
-  stroke-dashoffset: 80;
-  animation: sutra-draw var(--sutra-motion-duration-slow) var(--sutra-motion-easing-standard) forwards;
+  fill: none;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sutra-ink {
+    animation: sutra-draw var(--sutra-motion-duration-slow) var(--sutra-motion-easing-standard) forwards;
+  }
 }
 
 @keyframes sutra-draw {
+  from { stroke-dashoffset: 1; }
   to { stroke-dashoffset: 0; }
 }
 

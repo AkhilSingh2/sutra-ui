@@ -1,7 +1,7 @@
 export function MarkIcon() {
   return (
     <svg className="sutra-icon sutra-mark-icon" viewBox="0 0 32 16" aria-hidden="true" focusable="false">
-      <path className="sutra-ink" d="M1 12C6 2 12 14 18 6s10-4 13 2" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" />
+      <path className="sutra-ink" pathLength="1" d="M1 11C7 3 12 13 18 7s8-3 13 1" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" />
     </svg>
   );
 }
