@@ -1,0 +1,49 @@
+{
+  "color": {
+    "marigold": {
+      "$type": "color",
+      "300": { "$value": "#ffb703" },
+      "500": { "$value": "#ff8a00" },
+      "700": { "$value": "#c65300" },
+      "800": { "$value": "#8a3b00" }
+    },
+    "rani": {
+      "$type": "color",
+      "300": { "$value": "#ff7ab8" },
+      "500": { "$value": "#ff4d9a" },
+      "700": { "$value": "#c40062" },
+      "800": { "$value": "#9d124f" }
+    },
+    "peacock": {
+      "$type": "color",
+      "300": { "$value": "#14d6c6" },
+      "500": { "$value": "#06748a" },
+      "700": { "$value": "#04586c" },
+      "800": { "$value": "#0a5570" }
+    },
+    "turmeric": {
+      "$type": "color",
+      "300": { "$value": "#ffd15a" },
+      "500": { "$value": "#ffc107" },
+      "700": { "$value": "#7a4a00" }
+    },
+    "parrot": {
+      "$type": "color",
+      "300": { "$value": "#9af07a" },
+      "500": { "$value": "#2ebe4a" },
+      "700": { "$value": "#0f7a32" }
+    },
+    "indigo": {
+      "$type": "color",
+      "100": { "$value": "#e6e0ff" },
+      "300": { "$value": "#cbbdff" },
+      "500": { "$value": "#6d5bd0" },
+      "700": { "$value": "#3b2a86" },
+      "900": { "$value": "#1a0f2e" }
+    },
+    "cream": { "$type": "color", "$value": "#fff6ea" },
+    "ink": { "$type": "color", "$value": "#1a0f2e" },
+    "white": { "$type": "color", "$value": "#ffffff" },
+    "black": { "$type": "color", "$value": "#000000" }
+  }
+}

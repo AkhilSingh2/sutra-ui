@@ -1,0 +1,56 @@
+export type Locale = 'en' | 'hi';
+
+export const messages = {
+  en: {
+    close: 'Close',
+    copy: 'Copy',
+    copied: 'Copied',
+    download: 'Download',
+    menu: 'Menu',
+    breadcrumb: 'Breadcrumb',
+    related: 'Related tools',
+    theme: 'Theme',
+    language: 'Language',
+    required: 'required',
+    skip: 'Skip to content',
+    primaryNav: 'Primary',
+    light: 'Light',
+    dark: 'Dark',
+    contrast: 'Contrast',
+    system: 'System',
+    english: 'English',
+    hindi: 'Hindi',
+    dismiss: 'Dismiss notification',
+    rowHeader: 'Item',
+    atLeast: 'Minimum',
+    atMost: 'Maximum',
+  },
+  hi: {
+    close: 'बंद करें',
+    copy: 'कॉपी करें',
+    copied: 'कॉपी हो गया',
+    download: 'डाउनलोड करें',
+    menu: 'मेनू',
+    breadcrumb: 'ब्रेडक्रम्ब',
+    related: 'संबंधित उपकरण',
+    theme: 'थीम',
+    language: 'भाषा',
+    required: 'आवश्यक',
+    skip: 'मुख्य सामग्री पर जाएँ',
+    primaryNav: 'मुख्य नेविगेशन',
+    light: 'हल्का',
+    dark: 'गहरा',
+    contrast: 'उच्च कंट्रास्ट',
+    system: 'सिस्टम',
+    english: 'English',
+    hindi: 'हिन्दी',
+    dismiss: 'सूचना बंद करें',
+    rowHeader: 'मद',
+    atLeast: 'न्यूनतम',
+    atMost: 'अधिकतम',
+  },
+} as const;
+
+export type Messages = {
+  [Key in keyof (typeof messages)['en']]: string;
+};

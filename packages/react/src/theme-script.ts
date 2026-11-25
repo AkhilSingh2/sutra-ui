@@ -1,0 +1,1 @@
+export const themeInitScript = `(function(){try{var d=document.documentElement;var t=localStorage.getItem("sutra-theme");if(t==="light"||t==="dark"||t==="high-contrast"||t==="system"){d.setAttribute("data-theme",t);}var l=localStorage.getItem("sutra-locale");if(l==="hi"){d.lang="hi";}else if(l==="en"){d.lang="en";}}catch(e){}})();`;

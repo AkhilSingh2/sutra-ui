@@ -1,0 +1,51 @@
+{
+  "font": {
+    "family": {
+      "sans": {
+        "$type": "fontFamily",
+        "$description": "Body text uses Inter. Devanagari falls through to Noto Sans Devanagari, then Nirmala UI and Mangal. All webfonts are SIL Open Font License.",
+        "$value": ["Inter", "Noto Sans Devanagari", "Nirmala UI", "Mangal", "sans-serif"]
+      },
+      "display": {
+        "$type": "fontFamily",
+        "$description": "Baloo 2 for expressive Latin display. Devanagari falls through to Noto Sans Devanagari. Both are SIL Open Font License.",
+        "$value": ["Baloo 2", "Noto Sans Devanagari", "Inter", "sans-serif"]
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$description": "IBM Plex Mono for figures and code, with Noto Sans Mono as the OFL fallback.",
+        "$value": ["IBM Plex Mono", "Noto Sans Mono", "ui-monospace", "monospace"]
+      }
+    },
+    "weight": {
+      "regular": { "$type": "fontWeight", "$value": 400 },
+      "medium": { "$type": "fontWeight", "$value": 500 },
+      "semibold": { "$type": "fontWeight", "$value": 600 },
+      "bold": { "$type": "fontWeight", "$value": 700 }
+    },
+    "size": {
+      "$type": "dimension",
+      "xs": { "$value": "0.75rem" },
+      "sm": { "$value": "0.875rem" },
+      "md": { "$value": "1rem" },
+      "lg": { "$value": "1.125rem" },
+      "xl": { "$value": "1.375rem" },
+      "2xl": { "$value": "1.75rem" },
+      "3xl": { "$value": "2.25rem" },
+      "4xl": { "$value": "3rem" },
+      "display": { "$value": "4rem" }
+    },
+    "line": {
+      "$type": "dimension",
+      "xs": { "$value": "1.125rem" },
+      "sm": { "$value": "1.375rem" },
+      "md": { "$value": "1.5rem" },
+      "lg": { "$value": "1.75rem" },
+      "xl": { "$value": "1.875rem" },
+      "2xl": { "$value": "2.25rem" },
+      "3xl": { "$value": "2.75rem" },
+      "4xl": { "$value": "3.5rem" },
+      "display": { "$value": "4.5rem" }
+    }
+  }
+}
