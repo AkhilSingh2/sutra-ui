@@ -1,0 +1,107 @@
+{
+  "color": {
+    "bg": {
+      "$type": "color",
+      "canvas": { "$value": "#160b2e" },
+      "surface": { "$value": "#261246" },
+      "subtle": { "$value": "#35185c" },
+      "sunken": { "$value": "#0e071c" },
+      "inverse": { "$value": "{color.cream}" },
+      "primary": { "$value": "{color.peacock.300}" },
+      "primary-hover": { "$value": "#00c2b3" },
+      "primary-subtle": { "$value": "#083844" },
+      "accent": { "$value": "{color.rani.500}" },
+      "accent-hover": { "$value": "#ff2d8a" },
+      "accent-subtle": { "$value": "#4a1238" },
+      "danger": { "$value": "#be123c" },
+      "danger-hover": { "$value": "#9f1239" },
+      "danger-subtle": { "$value": "#4a1224" },
+      "success": { "$value": "{color.parrot.700}" },
+      "success-subtle": { "$value": "#0d3320" },
+      "warning-subtle": { "$value": "#3a2808" },
+      "info-subtle": { "$value": "#2a1860" }
+    },
+    "fg": {
+      "$type": "color",
+      "default": { "$value": "{color.cream}" },
+      "muted": { "$value": "#f3c9a4" },
+      "on-primary": { "$value": "#102018" },
+      "on-accent": { "$value": "{color.ink}" },
+      "on-danger": { "$value": "{color.cream}" },
+      "on-success": { "$value": "{color.cream}" },
+      "on-inverse": { "$value": "#160b2e" },
+      "link": { "$value": "#7ef0ea" },
+      "primary": { "$value": "#7ef0ea" },
+      "accent": { "$value": "#ff8ac4" },
+      "danger": { "$value": "#ffb0c4" },
+      "success": { "$value": "{color.parrot.300}" },
+      "warning": { "$value": "{color.turmeric.300}" },
+      "info": { "$value": "{color.indigo.300}" }
+    },
+    "border": {
+      "$type": "color",
+      "default": { "$value": "#c084fc" },
+      "strong": { "$value": "#f9a8d4" },
+      "primary": { "$value": "#7ef0ea" }
+    },
+    "focus": {
+      "$type": "color",
+      "ring": { "$value": "{color.rani.300}" }
+    },
+    "thread": {
+      "$type": "color",
+      "start": { "$value": "{color.marigold.300}" },
+      "end": { "$value": "#3dffe4" }
+    }
+  },
+  "gradient": {
+    "festival": {
+      "$type": "other",
+      "$value": "linear-gradient(115deg, #ffb703 0%, #ff4d9a 48%, #14d6c6 100%)"
+    },
+    "mesh": {
+      "$type": "other",
+      "$value": "radial-gradient(480px 240px at 0% 0%, #5a1848 0%, transparent 62%), radial-gradient(420px 260px at 100% 8%, #0c4a4a 0%, transparent 58%), radial-gradient(360px 200px at 70% 100%, #3a1d78 0%, transparent 55%)"
+    }
+  },
+  "pattern": {
+    "rangoli": {
+      "$type": "other",
+      "$value": "radial-gradient(circle at 12px 12px, rgba(255, 77, 154, 0.45) 2.2px, transparent 2.8px)"
+    },
+    "blockprint": {
+      "$type": "other",
+      "$value": "repeating-linear-gradient(135deg, transparent 0 10px, rgba(255, 183, 3, 0.22) 10px 12px)"
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "sm": {
+      "$value": {
+        "color": "#ffb703",
+        "offsetX": "4px",
+        "offsetY": "4px",
+        "blur": "0px",
+        "spread": "0px"
+      }
+    },
+    "md": {
+      "$value": {
+        "color": "#ff4d9a",
+        "offsetX": "6px",
+        "offsetY": "6px",
+        "blur": "0px",
+        "spread": "0px"
+      }
+    },
+    "lg": {
+      "$value": {
+        "color": "#14d6c6",
+        "offsetX": "10px",
+        "offsetY": "10px",
+        "blur": "0px",
+        "spread": "0px"
+      }
+    }
+  }
+}

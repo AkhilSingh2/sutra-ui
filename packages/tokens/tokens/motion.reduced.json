@@ -1,0 +1,15 @@
+{
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "fast": { "$value": "0ms" },
+      "normal": { "$value": "0ms" },
+      "slow": { "$value": "0ms" }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": [0, 0, 1, 1] },
+      "emphasis": { "$value": [0, 0, 1, 1] }
+    }
+  }
+}

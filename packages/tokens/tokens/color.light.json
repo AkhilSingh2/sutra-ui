@@ -1,0 +1,109 @@
+{
+  "color": {
+    "bg": {
+      "$type": "color",
+      "canvas": { "$value": "#fff3e4" },
+      "surface": { "$value": "{color.white}" },
+      "subtle": { "$value": "#ffe7f2" },
+      "sunken": { "$value": "#ffd7ae" },
+      "inverse": { "$value": "{color.ink}" },
+      "primary": { "$value": "{color.peacock.500}" },
+      "primary-hover": { "$value": "{color.peacock.700}" },
+      "primary-subtle": { "$value": "#d2f7f3" },
+      "accent": { "$value": "{color.rani.700}" },
+      "accent-hover": { "$value": "#9a004c" },
+      "accent-subtle": { "$value": "#ffd6ec" },
+      "danger": { "$value": "#c81e4a" },
+      "danger-hover": { "$value": "#9f1239" },
+      "danger-subtle": { "$value": "#ffe0e6" },
+      "success": { "$value": "{color.parrot.700}" },
+      "success-subtle": { "$value": "#ddf8d4" },
+      "warning-subtle": { "$value": "#fff3c4" },
+      "info-subtle": { "$value": "{color.indigo.100}" }
+    },
+    "fg": {
+      "$type": "color",
+      "default": { "$value": "{color.ink}" },
+      "muted": { "$value": "#5e3a55" },
+      "on-primary": { "$value": "{color.white}" },
+      "on-accent": { "$value": "{color.white}" },
+      "on-danger": { "$value": "{color.white}" },
+      "on-success": { "$value": "{color.white}" },
+      "on-inverse": { "$value": "#fff3e4" },
+      "link": { "$value": "#0b5f86" },
+      "primary": { "$value": "{color.peacock.800}" },
+      "accent": { "$value": "{color.rani.800}" },
+      "danger": { "$value": "#9f1239" },
+      "success": { "$value": "#0d6b28" },
+      "warning": { "$value": "{color.turmeric.700}" },
+      "info": { "$value": "{color.indigo.700}" }
+    },
+    "border": {
+      "$type": "color",
+      "default": { "$value": "#7a3e62" },
+      "strong": { "$value": "#5e3a55" },
+      "primary": { "$value": "{color.peacock.500}" }
+    },
+    "focus": {
+      "$type": "color",
+      "ring": { "$value": "{color.rani.700}" }
+    },
+    "thread": {
+      "$type": "color",
+      "start": { "$value": "{color.marigold.700}" },
+      "end": { "$value": "{color.peacock.500}" }
+    }
+  },
+  "gradient": {
+    "festival": {
+      "$type": "other",
+      "$value": "linear-gradient(115deg, #ff8a00 0%, #ff2d8a 46%, #06748a 100%)"
+    },
+    "mesh": {
+      "$type": "other",
+      "$value": "radial-gradient(520px 260px at 8% -10%, #ffd0a6 0%, transparent 62%), radial-gradient(460px 280px at 100% 0%, #ffc2e2 0%, transparent 58%), radial-gradient(380px 220px at 78% 110%, #c9f6f1 0%, transparent 55%)"
+    }
+  },
+  "pattern": {
+    "rangoli": {
+      "$type": "other",
+      "$description": "Optional decorative dot field. Do not place body text on a stronger version of this pattern.",
+      "$value": "radial-gradient(circle at 12px 12px, rgba(196, 0, 98, 0.28) 2.2px, transparent 2.8px)"
+    },
+    "blockprint": {
+      "$type": "other",
+      "$description": "Optional block-print stripe. Decorative only.",
+      "$value": "repeating-linear-gradient(135deg, transparent 0 10px, rgba(198, 83, 0, 0.16) 10px 12px)"
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "sm": {
+      "$value": {
+        "color": "#ff8a00",
+        "offsetX": "4px",
+        "offsetY": "4px",
+        "blur": "0px",
+        "spread": "0px"
+      }
+    },
+    "md": {
+      "$value": {
+        "color": "#c40062",
+        "offsetX": "6px",
+        "offsetY": "6px",
+        "blur": "0px",
+        "spread": "0px"
+      }
+    },
+    "lg": {
+      "$value": {
+        "color": "#06748a",
+        "offsetX": "10px",
+        "offsetY": "10px",
+        "blur": "0px",
+        "spread": "0px"
+      }
+    }
+  }
+}

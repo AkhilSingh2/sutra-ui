@@ -1,0 +1,77 @@
+{
+  "color": {
+    "bg": {
+      "$type": "color",
+      "canvas": { "$value": "{color.white}" },
+      "surface": { "$value": "{color.white}" },
+      "subtle": { "$value": "#eeeeee" },
+      "sunken": { "$value": "#e0e0e0" },
+      "inverse": { "$value": "{color.black}" },
+      "primary": { "$value": "#003d34" },
+      "primary-hover": { "$value": "#00241f" },
+      "primary-subtle": { "$value": "#e5f2ef" },
+      "accent": { "$value": "#5c3a00" },
+      "accent-hover": { "$value": "#3d2600" },
+      "accent-subtle": { "$value": "#fff4cc" },
+      "danger": { "$value": "#8e0000" },
+      "danger-hover": { "$value": "#5c0000" },
+      "danger-subtle": { "$value": "#ffecec" },
+      "success": { "$value": "#005c1f" },
+      "success-subtle": { "$value": "#e5f6ea" },
+      "warning-subtle": { "$value": "#fff4cc" },
+      "info-subtle": { "$value": "#e8eeff" }
+    },
+    "fg": {
+      "$type": "color",
+      "default": { "$value": "{color.black}" },
+      "muted": { "$value": "#1a1a1a" },
+      "on-primary": { "$value": "{color.white}" },
+      "on-accent": { "$value": "{color.white}" },
+      "on-danger": { "$value": "{color.white}" },
+      "on-success": { "$value": "{color.white}" },
+      "on-inverse": { "$value": "{color.white}" },
+      "link": { "$value": "#0028a0" },
+      "primary": { "$value": "#003d34" },
+      "accent": { "$value": "#5c3a00" },
+      "danger": { "$value": "#8e0000" },
+      "success": { "$value": "#005c1f" },
+      "warning": { "$value": "#5c3a00" },
+      "info": { "$value": "#0028a0" }
+    },
+    "border": {
+      "$type": "color",
+      "default": { "$value": "{color.black}" },
+      "strong": { "$value": "{color.black}" },
+      "primary": { "$value": "#003d34" }
+    },
+    "focus": {
+      "$type": "color",
+      "ring": { "$value": "{color.black}" }
+    },
+    "thread": {
+      "$type": "color",
+      "start": { "$value": "#5c3a00" },
+      "end": { "$value": "#003d34" }
+    }
+  },
+  "gradient": {
+    "festival": { "$type": "other", "$value": "linear-gradient(90deg, #5c3a00, #003d34)" },
+    "mesh": { "$type": "other", "$value": "none" }
+  },
+  "pattern": {
+    "rangoli": { "$type": "other", "$value": "none" },
+    "blockprint": { "$type": "other", "$value": "none" }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "sm": {
+      "$value": { "color": "#000000", "offsetX": "3px", "offsetY": "3px", "blur": "0px", "spread": "0px" }
+    },
+    "md": {
+      "$value": { "color": "#000000", "offsetX": "5px", "offsetY": "5px", "blur": "0px", "spread": "0px" }
+    },
+    "lg": {
+      "$value": { "color": "#000000", "offsetX": "8px", "offsetY": "8px", "blur": "0px", "spread": "0px" }
+    }
+  }
+}
