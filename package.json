@@ -1,0 +1,33 @@
+{
+  "name": "sutra-ui",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Sutra UI — an open-source design system for fast, accessible, India-first web tools.",
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "pnpm --filter @sutra-ui/tokens build && pnpm --filter @sutra-ui/react build && pnpm --filter @sutra-ui/docs build",
+    "build:libs": "pnpm --filter @sutra-ui/tokens build && pnpm --filter @sutra-ui/react build",
+    "test": "pnpm -r --filter @sutra-ui/tokens --filter @sutra-ui/react test",
+    "lint": "eslint .",
+    "typecheck": "pnpm -r --filter @sutra-ui/tokens --filter @sutra-ui/react --filter @sutra-ui/docs typecheck",
+    "size": "node scripts/size.mjs",
+    "dev": "pnpm build:libs && pnpm --filter @sutra-ui/docs dev",
+    "changeset": "changeset",
+    "version-packages": "changeset version"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.0"
+  }
+}

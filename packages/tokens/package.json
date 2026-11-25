@@ -1,0 +1,47 @@
+{
+  "name": "@sutra-ui/tokens",
+  "version": "0.1.0",
+  "description": "W3C DTCG design tokens for Sutra UI, built into CSS variables and a Tailwind preset.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "tokens"
+  ],
+  "exports": {
+    "./css": "./dist/sutra.css",
+    "./tailwind-preset": {
+      "require": "./dist/tailwind-preset.cjs",
+      "import": "./dist/tailwind-preset.js",
+      "default": "./dist/tailwind-preset.js"
+    },
+    "./meta": "./dist/meta.json",
+    "./tokens/light": "./dist/light.json",
+    "./tokens/dark": "./dist/dark.json",
+    "./tokens/high-contrast": "./dist/high-contrast.json",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkhilSingh2/sutra-ui.git",
+    "directory": "packages/tokens"
+  },
+  "homepage": "https://akhilsingh2.github.io/sutra-ui/",
+  "scripts": {
+    "build": "node build.mjs",
+    "pretest": "node build.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.1",
+    "style-dictionary": "^5.8.0",
+    "vitest": "^3.2.4"
+  }
+}
