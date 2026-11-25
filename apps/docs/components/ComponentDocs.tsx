@@ -38,6 +38,30 @@ export function ComponentDocs() {
 
   return (
     <div className="docs-stack">
+      <section className="docs-plate">
+        <h2>Variants</h2>
+        <p>The same object, in the states a tool actually needs.</p>
+        <div className="docs-row">
+          <Button>Primary</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="danger">Danger</Button>
+          <Button size="sm">Small</Button>
+          <Button size="lg">Large</Button>
+        </div>
+        <div className="docs-row">
+          <Badge>Neutral</Badge>
+          <Badge tone="primary">Emerald</Badge>
+          <Badge tone="accent">Oxblood</Badge>
+          <Badge tone="success">Success</Badge>
+          <Badge tone="warning">Gold</Badge>
+          <Badge tone="danger">Danger</Badge>
+        </div>
+        <Alert tone="info" title="A note">Information sits in indigo ink on a pale ground.</Alert>
+        <Alert tone="success" title="Recorded">The figure was copied.</Alert>
+        <Alert tone="warning" title="Illustrative">These rates are not advice.</Alert>
+        <Alert tone="danger" title="Missing value">Enter a salary before continuing.</Alert>
+      </section>
       <Section
         id="button"
         title="Button"

@@ -7,11 +7,11 @@ export default function ComponentsPage() {
     <article>
       <div className="docs-stack">
         <p className="docs-kicker">Components</p>
-        <h1>Controls for tools</h1>
-        <div className="sutra-thread" aria-hidden="true" />
-        <p>
-          Every control is reachable from the keyboard. Labels are visible. The React package ships as ESM
-          with no CSS-in-JS runtime. Import the stylesheet once.
+        <h1 className="docs-reveal">The collection.</h1>
+        <div className="docs-rule" aria-hidden="true" />
+        <p className="docs-lede">
+          Every control is on the keyboard path, named out loud, and shown in the variants a tool uses.
+          The library is ESM, with no CSS-in-JS runtime.
         </p>
       </div>
       <ComponentDocs />

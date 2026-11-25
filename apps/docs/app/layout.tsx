@@ -1,6 +1,5 @@
-import '@fontsource/baloo-2/600.css';
-import '@fontsource/baloo-2/700.css';
-import '@fontsource/baloo-2/800.css';
+import '@fontsource/fraunces/500.css';
+import '@fontsource/fraunces/600.css';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
@@ -19,7 +18,7 @@ import { Providers } from '../components/Providers';
 
 export const metadata: Metadata = {
   title: { default: 'Sutra UI', template: '%s · Sutra UI' },
-  description: 'A calm, accessible design system for fast, India-first web tools.',
+  description: 'An editorial design system for India-first tools. Gallery restraint, jewel pigments, accessible type.',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

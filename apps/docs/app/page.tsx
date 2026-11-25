@@ -2,67 +2,85 @@ import { Button } from '@sutra-ui/react';
 import type { Metadata } from 'next';
 import { href } from '../lib/href';
 
-export const metadata: Metadata = { title: 'Overview' };
+export const metadata: Metadata = { title: 'Index' };
 
 export default function HomePage() {
   return (
-    <article className="docs-prose">
+    <article className="docs-home">
       <section className="docs-hero">
-        <p className="docs-kicker">Marigold · rani · peacock</p>
-        <h1>Tools worth celebrating.</h1>
-        <div className="sutra-thread" aria-hidden="true" />
-        <p className="docs-lede">
-          Sutra UI is a bold, playful design system for calculators, converters, and generators. Festival
-          colours, chunky type, and Indian number formatting, with text that still meets WCAG AA.
-        </p>
-        <p lang="hi" className="docs-hi">
-          वेतन, कर, अंक और रूपांतरण — रंगों के साथ, हल्की और गहरी थीम में।
-        </p>
-        <div className="docs-actions">
-          <Button href={href('/preview')}>Open a tool preview</Button>
-          <Button href={href('/foundations')} variant="secondary">
-            View tokens
-          </Button>
+        <div className="docs-hero-copy">
+          <p className="docs-kicker">Gallery edition</p>
+          <h1>Sutra</h1>
+          <div className="docs-rule" aria-hidden="true" />
+          <p className="docs-lede">
+            A design system for tools that handle money and measure. The Indian references are in the
+            line, the numeral, and the language — not in a louder colour.
+          </p>
+          <p lang="hi" className="docs-hi">
+            वेतन, कर और अंक, एक शांत पंक्ति में।
+          </p>
+          <div className="docs-actions">
+            <Button href={href('/components')}>View the components</Button>
+            <Button href={href('/philosophy')} variant="secondary">
+              Read the principles
+            </Button>
+          </div>
         </div>
+        <aside className="docs-hero-plate" aria-hidden="true">
+          <span>01 — Ink</span>
+          <svg viewBox="0 0 240 320" className="docs-hero-stroke">
+            <path className="sutra-ink" pathLength="1" d="M28 28h24M28 28v24M212 28h-24M212 28v24M28 292h24M28 292v-24M212 292h-24M212 292v-24" />
+            <path className="sutra-ink" pathLength="1" d="M46 278h148" />
+            <path className="sutra-ink" pathLength="1" d="M120 278c-2-48-4-78 0-118" />
+            <path className="sutra-ink" pathLength="1" d="M118 214c-36-8-66-30-74-58 30 8 54 28 74 58z" />
+            <path className="sutra-ink" pathLength="1" d="M122 196c34-10 62-34 72-62-30 12-52 34-72 62z" />
+            <path className="sutra-ink" pathLength="1" d="M120 160c-22-16-28-46 0-66 28 20 22 50 0 66z" />
+            <path className="sutra-ink" pathLength="1" d="M120 154c-12-14-12-34 0-46 12 12 12 32 0 46z" />
+            <path className="sutra-ink" pathLength="1" d="M148 168c18-6 34-22 38-40-16 10-28 24-38 40z" />
+            <path className="sutra-ink" pathLength="1" d="M96 176c-16-4-28-16-30-30 12 6 22 16 30 30z" />
+          </svg>
+          <span>Kalamkari study</span>
+        </aside>
       </section>
-      <div className="docs-grid">
-        <section>
-          <h2>Festive</h2>
-          <p>Marigold, rani pink, peacock, turmeric, parrot green, and indigo. Colour is never the only signal.</p>
-        </section>
-        <section>
-          <h2>India-first</h2>
-          <p>Lakh and crore grouping, an INR mode, and Hindi labels for the controls themselves.</p>
-        </section>
-        <section>
-          <h2>Lightweight</h2>
-          <p>CSS variables, no runtime CSS-in-JS, and a core bundle under 15KB gzipped.</p>
-        </section>
-      </div>
-      <h2>Install</h2>
-      <pre className="docs-code">
-        <code>{`pnpm add @sutra-ui/tokens @sutra-ui/react`}</code>
-      </pre>
-      <h2>Use it in a Next.js page</h2>
-      <pre className="docs-code">
-        <code>{`import "@sutra-ui/react/styles.css";
-import { SutraProvider, NumberInput, ToolLayout } from "@sutra-ui/react";
-
-export default function Page() {
-  return (
-    <SutraProvider>
-      <ToolLayout title="CTC calculator" breadcrumb={[{ href: "/", label: "Home" }, { label: "CTC" }]}>
-        <NumberInput label="Annual CTC" mode="currency" value={1200000} onValueChange={() => {}} />
-      </ToolLayout>
-    </SutraProvider>
-  );
-}`}</code>
-      </pre>
-      <p>
-        Load Baloo 2 for display, Inter and Noto Sans Devanagari for body text, and IBM Plex Mono for
-        figures. All four are SIL Open Font License fonts. Devanagari falls through to Nirmala UI and Mangal
-        when the webfont has not arrived.
-      </p>
+      <section className="docs-index">
+        <h2>In the collection</h2>
+        <ol>
+          <li>
+            <a href={href('/philosophy')}>
+              <span>02</span>
+              <strong>Philosophy</strong>
+              <em>Why the palette, the type, and the motion are held back.</em>
+            </a>
+          </li>
+          <li>
+            <a href={href('/components')}>
+              <span>03</span>
+              <strong>Components</strong>
+              <em>Every control, with its variants, in the same room.</em>
+            </a>
+          </li>
+          <li>
+            <a href={href('/foundations')}>
+              <span>04</span>
+              <strong>Tokens</strong>
+              <em>Ivory, ink, gold, oxblood, emerald. Live in both themes.</em>
+            </a>
+          </li>
+          <li>
+            <a href={href('/preview')}>
+              <span>05</span>
+              <strong>Case study</strong>
+              <em>An income-tax shell. Illustrative figures, not advice.</em>
+            </a>
+          </li>
+        </ol>
+      </section>
+      <footer className="docs-colophon">
+        <p>
+          Fraunces, Inter, Noto Sans Devanagari, and IBM Plex Mono are SIL Open Font License faces.
+          Install with <code>pnpm add @sutra-ui/tokens @sutra-ui/react</code>.
+        </p>
+      </footer>
     </article>
   );
 }

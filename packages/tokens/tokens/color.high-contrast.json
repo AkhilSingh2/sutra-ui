@@ -55,11 +55,11 @@
     }
   },
   "gradient": {
-    "festival": { "$type": "other", "$value": "linear-gradient(90deg, #5c3a00, #003d34)" },
-    "mesh": { "$type": "other", "$value": "none" }
+    "rule": { "$type": "other", "$value": "linear-gradient(90deg, transparent, #000000 20%, #000000 80%, transparent)" },
+    "veil": { "$type": "other", "$value": "none" }
   },
   "pattern": {
-    "rangoli": { "$type": "other", "$value": "none" },
+    "kalamkari": { "$type": "other", "$value": "none" },
     "blockprint": { "$type": "other", "$value": "none" }
   },
   "shadow": {
