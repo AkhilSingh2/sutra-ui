@@ -25,9 +25,10 @@ pnpm dev
 pnpm lint
 pnpm typecheck
 pnpm test
-pnpm build:libs
 pnpm size
 ```
+
+`pnpm typecheck` builds `@sutra-ui/tokens` and `@sutra-ui/react` first. The docs app typechecks the published entry points, which only exist after that build.
 
 `pnpm test` includes the WCAG AA contrast test for every semantic colour pair
 in light, dark, and high-contrast themes. `pnpm size` fails if the core

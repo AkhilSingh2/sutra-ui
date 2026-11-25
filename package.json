@@ -13,7 +13,7 @@
     "build:libs": "pnpm --filter @sutra-ui/tokens build && pnpm --filter @sutra-ui/react build",
     "test": "pnpm -r --filter @sutra-ui/tokens --filter @sutra-ui/react test",
     "lint": "eslint .",
-    "typecheck": "pnpm -r --filter @sutra-ui/tokens --filter @sutra-ui/react --filter @sutra-ui/docs typecheck",
+    "typecheck": "pnpm build:libs && pnpm -r --filter @sutra-ui/tokens --filter @sutra-ui/react --filter @sutra-ui/docs typecheck",
     "size": "node scripts/size.mjs",
     "dev": "pnpm build:libs && pnpm --filter @sutra-ui/docs dev",
     "changeset": "changeset",
