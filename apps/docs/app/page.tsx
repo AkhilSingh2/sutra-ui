@@ -7,27 +7,28 @@ export const metadata: Metadata = { title: 'Overview' };
 export default function HomePage() {
   return (
     <article className="docs-prose">
-      <p className="docs-kicker">Open source · India-first tools</p>
-      <h1>A calm thread for numbers people trust.</h1>
-      <div className="sutra-thread" aria-hidden="true" />
-      <p className="docs-lede">
-        Sutra UI is a public design system for calculators, converters, and generators. It is built for
-        Next.js static sites, with Devanagari-ready type, Indian number formatting, and themes that meet
-        WCAG AA.
-      </p>
-      <p lang="hi" className="docs-hi">
-        वेतन, कर, अंक और रूपांतरण — साफ़ अक्षरों में, हल्की और गहरी थीम के साथ।
-      </p>
-      <div className="docs-actions">
-        <Button href={href('/preview')}>Open a tool preview</Button>
-        <Button href={href('/foundations')} variant="secondary">
-          View tokens
-        </Button>
-      </div>
+      <section className="docs-hero">
+        <p className="docs-kicker">Marigold · rani · peacock</p>
+        <h1>Tools worth celebrating.</h1>
+        <div className="sutra-thread" aria-hidden="true" />
+        <p className="docs-lede">
+          Sutra UI is a bold, playful design system for calculators, converters, and generators. Festival
+          colours, chunky type, and Indian number formatting, with text that still meets WCAG AA.
+        </p>
+        <p lang="hi" className="docs-hi">
+          वेतन, कर, अंक और रूपांतरण — रंगों के साथ, हल्की और गहरी थीम में।
+        </p>
+        <div className="docs-actions">
+          <Button href={href('/preview')}>Open a tool preview</Button>
+          <Button href={href('/foundations')} variant="secondary">
+            View tokens
+          </Button>
+        </div>
+      </section>
       <div className="docs-grid">
         <section>
-          <h2>Trustworthy</h2>
-          <p>Warm paper, peacock ink, and a marigold thread. Colour is never the only signal.</p>
+          <h2>Festive</h2>
+          <p>Marigold, rani pink, peacock, turmeric, parrot green, and indigo. Colour is never the only signal.</p>
         </section>
         <section>
           <h2>India-first</h2>
@@ -58,8 +59,9 @@ export default function Page() {
 }`}</code>
       </pre>
       <p>
-        Load Inter, Noto Sans Devanagari, and IBM Plex Mono yourself. All three are SIL Open Font License
-        fonts. The token stack falls back to Nirmala UI and Mangal when the webfont has not arrived.
+        Load Baloo 2 for display, Inter and Noto Sans Devanagari for body text, and IBM Plex Mono for
+        figures. All four are SIL Open Font License fonts. Devanagari falls through to Nirmala UI and Mangal
+        when the webfont has not arrived.
       </p>
     </article>
   );

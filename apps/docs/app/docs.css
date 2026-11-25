@@ -27,8 +27,8 @@ body {
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  height: 3px;
-  background: linear-gradient(90deg, var(--sutra-color-thread-start), var(--sutra-color-thread-end));
+  height: 6px;
+  background: var(--sutra-gradient-festival);
 }
 .docs-controls { margin-left: auto; display: flex; gap: var(--sutra-space-2); align-items: center; }
 .docs-frame { display: grid; grid-template-columns: 220px minmax(0, 1fr); }
@@ -60,8 +60,9 @@ body {
 }
 .docs-main { min-width: 0; padding: var(--sutra-space-8) var(--sutra-space-6) var(--sutra-space-16); }
 .docs-prose, .docs-stack { max-width: 880px; min-width: 0; }
-.docs-prose h1, .docs-stack h1, .docs-section h2, .docs-prose h2 {
-  font-weight: var(--sutra-font-weight-semibold);
+.docs-prose h1, .docs-stack h1, .docs-hero h1, .docs-section h2, .docs-prose h2 {
+  font-family: var(--sutra-font-family-display);
+  font-weight: var(--sutra-font-weight-bold);
   letter-spacing: 0;
 }
 .docs-prose h1, .docs-stack h1 {
@@ -69,6 +70,17 @@ body {
   font-size: var(--sutra-font-size-display);
   line-height: var(--sutra-font-line-display);
 }
+.docs-hero {
+  margin: 0 0 var(--sutra-space-8);
+  padding: var(--sutra-space-8);
+  border: 2px solid var(--sutra-color-border-default);
+  border-radius: var(--sutra-radius-xl);
+  box-shadow: var(--sutra-shadow-lg);
+  background-color: var(--sutra-color-bg-canvas);
+  background-image: var(--sutra-pattern-rangoli), var(--sutra-gradient-mesh);
+  background-size: 24px 24px, auto;
+}
+.docs-hero h1 { max-width: 14ch; margin-top: var(--sutra-space-3); }
 .docs-kicker {
   margin: 0;
   color: var(--sutra-color-fg-accent);
@@ -185,7 +197,7 @@ body {
   .docs-controls { display: none; }
   .docs-nav--open + .docs-main, .docs-top { }
   .docs-main { padding: var(--sutra-space-5) var(--sutra-space-4) var(--sutra-space-10); }
-  .docs-prose h1, .docs-stack h1 { font-size: var(--sutra-font-size-3xl); line-height: var(--sutra-font-line-3xl); }
+  .docs-prose h1, .docs-stack h1, .docs-hero h1 { font-size: var(--sutra-font-size-3xl); line-height: var(--sutra-font-line-3xl); }
   .preview-grid { grid-template-columns: 1fr; }
   .docs-controls-mobile { display: flex; }
 }

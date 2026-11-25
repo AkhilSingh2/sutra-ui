@@ -163,6 +163,7 @@ function presetFrom(flat) {
         },
         fontFamily: {
           sans: flat['font.family.sans'].value,
+          display: flat['font.family.display'].value,
           mono: flat['font.family.mono'].value,
         },
         fontSize: {
@@ -180,6 +181,7 @@ function presetFrom(flat) {
           regular: String(flat['font.weight.regular'].value),
           medium: String(flat['font.weight.medium'].value),
           semibold: String(flat['font.weight.semibold'].value),
+          bold: String(flat['font.weight.bold'].value),
         },
         spacing: Object.fromEntries(
           Object.keys(flat)

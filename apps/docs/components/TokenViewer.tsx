@@ -99,7 +99,7 @@ function TypeSpecimen() {
   return (
     <div className="specimen">
       <p className="docs-lede" style={{ fontFamily: 'var(--sutra-font-family-sans)', margin: 0 }}>
-        Inter for Latin, Noto Sans Devanagari for Hindi.
+        Baloo 2 for display. Inter and Noto Sans Devanagari for body text.
       </p>
       <p lang="hi" style={{ fontFamily: 'var(--sutra-font-family-sans)', fontSize: 'var(--sutra-font-size-xl)', lineHeight: 'var(--sutra-font-line-xl)', margin: 0 }}>
         आपका कर योग्य वेतन १८ लाख है।

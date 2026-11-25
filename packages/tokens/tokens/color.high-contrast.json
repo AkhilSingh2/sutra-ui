@@ -54,34 +54,24 @@
       "end": { "$value": "#003d34" }
     }
   },
+  "gradient": {
+    "festival": { "$type": "other", "$value": "linear-gradient(90deg, #5c3a00, #003d34)" },
+    "mesh": { "$type": "other", "$value": "none" }
+  },
+  "pattern": {
+    "rangoli": { "$type": "other", "$value": "none" },
+    "blockprint": { "$type": "other", "$value": "none" }
+  },
   "shadow": {
     "$type": "shadow",
     "sm": {
-      "$value": {
-        "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "0px",
-        "blur": "0px",
-        "spread": "1px"
-      }
+      "$value": { "color": "#000000", "offsetX": "3px", "offsetY": "3px", "blur": "0px", "spread": "0px" }
     },
     "md": {
-      "$value": {
-        "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "0px",
-        "blur": "0px",
-        "spread": "2px"
-      }
+      "$value": { "color": "#000000", "offsetX": "5px", "offsetY": "5px", "blur": "0px", "spread": "0px" }
     },
     "lg": {
-      "$value": {
-        "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "0px",
-        "blur": "0px",
-        "spread": "3px"
-      }
+      "$value": { "color": "#000000", "offsetX": "8px", "offsetY": "8px", "blur": "0px", "spread": "0px" }
     }
   }
 }
